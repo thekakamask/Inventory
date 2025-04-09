@@ -49,6 +49,14 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    //Provides additional Material Design icons for use in the user interface.
+    implementation(libs.androidx.material.icons.extended)
+
+    //Makes it easy to integrate Google Fonts directly into Jetpack Compose.
+    implementation(libs.androidx.ui.text.google.fonts)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

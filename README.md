@@ -3,11 +3,14 @@
 
 ## ✅ **LAST MAJOR UPDATES**
 
-   - Initial Commit.
+   - Implemented custom Theme with specific colors, shapes and strings.
+   - Implemented Google font "Space Grotesk".
+   - Implemented App Logo.
 
 ## ❌ **NEXT UPDATES**
 
-   - ❌ **This section has not been implemented yet.**
+   - Implement Repository layer.
+   - Implement Model layer.
 
 ## 📋 **Features**
 
@@ -29,7 +32,11 @@
          - ❌ **NOT IMPLEMENTED** Display application title and possible future actions.
 
       - Light/Dark Mode:
-         - ❌ **NOT IMPLEMENTED** Supports **light/dark mode**.
+         - ✅ **DONE** Supports **light/dark mode**.
+
+      - Custom theme:
+         - ✅ **DONE** Implemented custom colors and shapes.
+         - ✅ **DONE** Implemented **Google font** "Space Grotesk".
 
    - 🔄 Real-time status management:
 
