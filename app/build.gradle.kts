@@ -56,6 +56,13 @@ dependencies {
     //Makes it easy to integrate Google Fonts directly into Jetpack Compose.
     implementation(libs.androidx.ui.text.google.fonts)
 
+    //Enables Jetpack Navigation to be used with Jetpack Compose to manage navigation between screens.
+    implementation(libs.androidx.navigation.compose)
+
+    //Facilitates integration of ViewModel into Jetpack Compose to manage states and lifecycle.
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -3,33 +3,40 @@
 
 ## ✅ **LAST MAJOR UPDATES**
 
-   - Implemented custom Theme with specific colors, shapes and strings.
-   - Implemented Google font "Space Grotesk".
-   - Implemented App Logo.
+   - Set up MVVM architecture with `ViewModel`, `UiState` and validation logic.
+   - Implemented `NavHost` with dynamic navigation between Home, Entry, Edit, and Details screens.
+   - Created reusable top app bar (`InventoryTopAppBar`) with dynamic back navigation support.
+   - Designed item forms with validation, state management and conversion functions.
+   - Created custom `AppContainer` for dependency injection of `ItemsRepository`.
+   - Built screens using `Scaffold`, `FloatingActionButton`, and Jetpack Compose UI components.
 
 ## ❌ **NEXT UPDATES**
 
-   - Implement Repository layer.
-   - Implement Model layer.
+   - Implement Room database (Entity, DAO, Database class).
+   - Connect `ItemsRepository` to Room DAO for real data operations.
+   - Replace mock item list in `HomeScreen` with data from the local database.
+   - Add suspend functions for insert/update/delete in `OfflineItemsRepository`.
+   - Observe item list from database using `Flow` and display reactively.
+   - Implement `ViewModelScope` coroutines for async DB operations.
 
 ## 📋 **Features**
 
    - 🗂 Manage inventory :
 
-      - ❌ **NOT IMPLEMENTED** Display inventory list stored locally in the Room database.
-      - ❌ **NOT IMPLEMENTED** Add new items with name, price, and quantity.
-      - ❌ **NOT IMPLEMENTED** Edit existing items via dedicated screen.
-      - ❌ **NOT IMPLEMENTED** Delete items permanently from local storage.
+      - 🟩 **IN PROGRESS** Display inventory list stored locally in the Room database.
+      - 🟩 **IN PROGRESS** Add new items with name, price, and quantity.
+      - 🟩 **IN PROGRESS** Edit existing items via dedicated screen.
+      - 🟩 **IN PROGRESS** Delete items permanently from local storage.
       - ❌ **NOT IMPLEMENTED** Sell item to decrease quantity.
 
    - 🎨 Modern and Fluid Interface:
 
-      - ❌ **NOT IMPLEMENTED** Follows Material Design 3 guidelines.
-      - ❌ **NOT IMPLEMENTED** Smooth transitions with Navigation Component.
-      - ❌ **NOT IMPLEMENTED** Responsive layout with adaptive UI.
+      - ✅ **DONE** Follows Material Design 3 guidelines.
+      - ✅ **DONE** Smooth transitions with Navigation Component.
+      - ✅ **DONE** Responsive layout with adaptive UI.
 
       - TopBar:
-         - ❌ **NOT IMPLEMENTED** Display application title and possible future actions.
+         - ✅ **DONE** Display application title and possible future actions.
 
       - Light/Dark Mode:
          - ✅ **DONE** Supports **light/dark mode**.
@@ -41,8 +48,8 @@
    - 🔄 Real-time status management:
 
       - ❌ **NOT IMPLEMENTED** Use of StateFlow for UI state handling.
-      - ❌ **NOT IMPLEMENTED** ViewModel for lifecycle-aware logic.
-      - ❌ **NOT IMPLEMENTED** Coroutines for async data operations.
+      - ✅ **DONE** ViewModel for lifecycle-aware logic.
+      - 🟩 **IN PROGRESS** Coroutines for async data operations.
 
    - 📦 Data Persistence:
 
@@ -51,8 +58,8 @@
 
    - 🧠 Architecture & Code Structure:
 
-      - ❌ **NOT IMPLEMENTED** MVVM architecture pattern.
-      - ❌ **NOT IMPLEMENTED** Clean separation between UI and business logic.
+      - ✅ **DONE** MVVM architecture pattern.
+      - ✅ **DONE** Clean separation between UI and business logic.
 
    - 🚀 Performance and responsiveness:
    
@@ -82,7 +89,13 @@
 
 ## 📸 **Screenshots**
 
-   - ❌ **This section has not been implemented yet.**
+   - **Home screen**:
+   
+      ![Home screen](screenshots/home_screen.png)
+
+   - **Item edit screen**:
+   
+      ![Item edit screen](screenshots/item_edit_screen.png)
 
 
 ## 🤝 **Contributions**
