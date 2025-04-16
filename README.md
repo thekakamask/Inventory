@@ -7,12 +7,12 @@
       - Creating the item entity representing a row in the "items" table.
       - Defining the ItemDao Dao with basic operations.
       - Implementing the InventoryDatabase class (singleton) to expose the DAO and manage the database via Room.
+   - Connected `ItemsRepository` to Room DAO for real data operations.
+   - Added functions for insert/update/delete in `OfflineItemsRepository`.
       
 ## ❌ **NEXT UPDATES**
 
-   - Connect `ItemsRepository` to Room DAO for real data operations.
    - Replace mock item list in `HomeScreen` with data from the local database.
-   - Add suspend functions for insert/update/delete in `OfflineItemsRepository`.
    - Observe item list from database using `Flow` and display reactively.
    - Implement `ViewModelScope` coroutines for async DB operations.
 
