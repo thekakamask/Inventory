@@ -38,7 +38,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.dcac.inventory.InventoryTopAppBar
 import com.dcac.inventory.R
-import com.dcac.inventory.model.Item
+import com.dcac.inventory.data.Item
 import com.dcac.inventory.ui.navigation.NavigationDestination
 import com.dcac.inventory.ui.theme.InventoryTheme
 

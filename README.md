@@ -3,16 +3,13 @@
 
 ## ✅ **LAST MAJOR UPDATES**
 
-   - Set up MVVM architecture with `ViewModel`, `UiState` and validation logic.
-   - Implemented `NavHost` with dynamic navigation between Home, Entry, Edit, and Details screens.
-   - Created reusable top app bar (`InventoryTopAppBar`) with dynamic back navigation support.
-   - Designed item forms with validation, state management and conversion functions.
-   - Created custom `AppContainer` for dependency injection of `ItemsRepository`.
-   - Built screens using `Scaffold`, `FloatingActionButton`, and Jetpack Compose UI components.
-
+   - Implemented local database with Room : 
+      - Creating the item entity representing a row in the "items" table.
+      - Defining the ItemDao Dao with basic operations.
+      - Implementing the InventoryDatabase class (singleton) to expose the DAO and manage the database via Room.
+      
 ## ❌ **NEXT UPDATES**
 
-   - Implement Room database (Entity, DAO, Database class).
    - Connect `ItemsRepository` to Room DAO for real data operations.
    - Replace mock item list in `HomeScreen` with data from the local database.
    - Add suspend functions for insert/update/delete in `OfflineItemsRepository`.
@@ -53,7 +50,7 @@
 
    - 📦 Data Persistence:
 
-      - ❌ **NOT IMPLEMENTED** Persist inventory data locally using Room (SQLite).
+      - 🟩 **IN PROGRESS** Persist inventory data locally using Room (SQLite).
       - ❌ **NOT IMPLEMENTED** Automatically restore inventory after app restart.
 
    - 🧠 Architecture & Code Structure:

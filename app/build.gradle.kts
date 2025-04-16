@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -61,6 +62,16 @@ dependencies {
 
     //Facilitates integration of ViewModel into Jetpack Compose to manage states and lifecycle.
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    // Room is a Jetpack data persistence library.
+    //It simplifies access to a SQLite database.
+    //It allows you to structure data with entities (@Entity), access data via interfaces (@Dao) and define a base (@Database).
+    //It generates safe, optimized code at compile time (thanks to KSP).
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    //KSP for analyze and generate Kotlin code at compile time.
+    //It is used by libraries that need to generate code automatically (such as Room, Hilt, Moshi...).
+    ksp(libs.androidx.room.compiler)
 
 
 

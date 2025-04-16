@@ -4,7 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.dcac.inventory.model.Item
+import com.dcac.inventory.data.Item
 import java.text.NumberFormat
 
 //ViewModel to validate and insert items in the Room database.

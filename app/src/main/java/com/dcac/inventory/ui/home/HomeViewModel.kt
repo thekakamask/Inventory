@@ -1,7 +1,7 @@
 package com.dcac.inventory.ui.home
 
 import androidx.lifecycle.ViewModel
-import com.dcac.inventory.model.Item
+import com.dcac.inventory.data.Item
 
 // ViewModel to retrieve all items in the Room database.
 class HomeViewModel : ViewModel() {

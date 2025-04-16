@@ -34,7 +34,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.dcac.inventory.InventoryTopAppBar
 import com.dcac.inventory.R
-import com.dcac.inventory.model.Item
+import com.dcac.inventory.data.Item
 import com.dcac.inventory.ui.item.formatedPrice
 import com.dcac.inventory.ui.navigation.NavigationDestination
 import com.dcac.inventory.ui.theme.InventoryTheme
