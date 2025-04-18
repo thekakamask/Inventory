@@ -32,12 +32,17 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.dcac.inventory.InventoryTopAppBar
 import com.dcac.inventory.R
 import com.dcac.inventory.data.Item
+import com.dcac.inventory.ui.AppViewModelProvider
 import com.dcac.inventory.ui.item.formatedPrice
 import com.dcac.inventory.ui.navigation.NavigationDestination
 import com.dcac.inventory.ui.theme.InventoryTheme
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+
 
 object HomeDestination : NavigationDestination {
     override val route = "home"
@@ -51,8 +56,11 @@ object HomeDestination : NavigationDestination {
 fun HomeScreen(
     navigateToItemEntry: () -> Unit,
     navigateToItemUpdate: (Int) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    viewModel: HomeViewModel = viewModel(factory = AppViewModelProvider.Factory)
 ) {
+
+    val homeUiState by viewModel.homeUiState.collectAsState()
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
 
     Scaffold(
@@ -78,7 +86,7 @@ fun HomeScreen(
         },
     ) { innerPadding ->
         HomeBody(
-            itemList = listOf(),
+            itemList = homeUiState.itemList,
             onItemClick = navigateToItemUpdate,
             modifier = modifier.fillMaxSize(),
             contentPadding = innerPadding,

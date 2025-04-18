@@ -5,10 +5,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.dcac.inventory.data.Item
+import com.dcac.inventory.data.ItemsRepository
 import java.text.NumberFormat
 
 //ViewModel to validate and insert items in the Room database.
-class ItemEntryViewModel : ViewModel() {
+class ItemEntryViewModel(
+    private val itemsRepository: ItemsRepository
+) : ViewModel() {
 
     //Holds current item ui state
     var itemUiState by mutableStateOf(ItemUiState())
@@ -24,6 +27,12 @@ class ItemEntryViewModel : ViewModel() {
     private fun validateInput(uiState: ItemDetails = itemUiState.itemDetails): Boolean {
         return with(uiState) {
             name.isNotBlank() && price.isNotBlank() && quantity.isNotBlank()
+        }
+    }
+
+    suspend fun saveItem() {
+        if (validateInput()) {
+            itemsRepository.insertItem(itemUiState.itemDetails.toItem())
         }
     }
 }
