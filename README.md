@@ -3,18 +3,15 @@
 
 ## ✅ **LAST MAJOR UPDATES**
 
-   - Set up Room database integration with DAO, entities, and a singleton instance.
-   - Implemented item entry UI with form validation and insertion logic.
-   - Connected HomeScreen to Room using `StateFlow` to display live inventory list.
-   - Used Flow and Coroutines for asynchronous DB operations in the ViewModel.
-   - Tested ItemDao operations with an in-memory Room database.
-      
-## ❌ **NEXT UPDATES**
-
-   - Add edit item functionality via `ItemEditViewModel` and update UI screen.
+   - Added edit item functionality via `ItemEditViewModel` and update UI screen.
    - Add delete item support from item detail or list view.
    - Implement sell item logic to decrease quantity.
    - Enable data restoration after app restart using SavedStateHandle.
+   - Deployed Signed APK for install the application in release mode.
+      
+## ❌ **NEXT UPDATES**
+
+   - This app is now finish.
 
 ## 📋 **Features**
 
@@ -22,9 +19,9 @@
 
       - ✅ **DONE** Display inventory list stored locally in the Room database.
       - ✅ **DONE** Add new items with name, price, and quantity.
-      - 🟩 **IN PROGRESS** Edit existing items via dedicated screen.
-      - 🟩 **IN PROGRESS** Delete items permanently from local storage.
-      - ❌ **NOT IMPLEMENTED** Sell item to decrease quantity.
+      - ✅ **DONE** Edit existing items via dedicated screen.
+      - ✅ **DONE** Delete items permanently from local storage.
+      - ✅ **DONE** Sell item to decrease quantity.
 
    - 🎨 Modern and Fluid Interface:
 
@@ -44,14 +41,14 @@
 
    - 🔄 Real-time status management:
 
-      - 🟩 **IN PROGRESS** Use of StateFlow for UI state handling.
+      - ✅ **DONE** Use of StateFlow for UI state handling.
       - ✅ **DONE** ViewModel for lifecycle-aware logic.
-      - 🟩 **IN PROGRESS** Coroutines for async data operations.
+      - ✅ **DONE** Coroutines for async data operations.
 
    - 📦 Data Persistence:
 
       - ✅ **DONE** Persist inventory data locally using Room (SQLite).
-      - ❌ **NOT IMPLEMENTED** Automatically restore inventory after app restart.
+      - ✅ **DONE** Automatically restore inventory after app restart.
 
    - 🧠 Architecture & Code Structure:
 
@@ -64,8 +61,6 @@
       
    - 🛠 Error Handling & User Feedback:
 
-      - ❌ **NOT IMPLEMENTED** UI instrumented tests.
-      - ❌ **NOT IMPLEMENTED** ViewModel and Repository tests.
       - ✅ **DONE** : Validates Room DAO operations with in-memory database.
 
 ## 🛠️ **Tech Stack**
@@ -84,7 +79,9 @@
 ## 🚀 **How to Use**
    
 1. **Launch the App**:
-   - In android studio, download the code and launch the app on an Android device or emulator. (Bad performance because in Debug Build Variant)
+   - Download the "app-release.apk" file find in \app\release\ .
+   - Install the file in your smartphone or in an emulator. (Good performance because in Release Build Variant)
+   - If you want to use android studio, download the code and launch the app on an Android device or emulator. (Bad performance because in Debug Build Variant)
 2. **Use The + Button on the HomeScreen**:
    - The HomeScreen displays message in case of no item adding.
    - Click on the Button on the down/right side with the "+".
@@ -95,6 +92,13 @@
    - The save button clicking will return you automatically on the HomeScreen
    - You can now see the item displays on the HomeScreen.
    - Continue to add and store items.
+5. **See the details of items, and modify them**
+   -click on an item for see it details.
+   -click on the floating button to modify it details.
+   -click on sell to decrease the amount of item.
+   -click on delete to delete the item from the app and the database.
+6. **Enjoy the App**
+
 
 ## 📸 **Screenshots**
 
@@ -104,11 +108,20 @@
 
       ![Home screen](screenshots/home_screen.png)
 
-   - **Item edit screen**:
+   - **Item entry screen**:
    
-      ![Item edit screen](screenshots/edit_screen_empty.png)
+      ![Item entry screen empty](screenshots/entry_screen_empty.png)
+
+      ![Item entry screen](screenshots/entry_screen.png)
+
+   - **Item details screen**:
+   
+      ![Item details screen](screenshots/detail_screen.png)
+
+   - **Item edit screen**:
 
       ![Item edit screen](screenshots/edit_screen.png)
+
 
 
 ## 🤝 **Contributions**
